@@ -1,0 +1,24 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "description": "javascript excel app",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksamidiel/excel_app.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "aksamidiel (raven-xl@mail.ru)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aksamidiel/excel_app/issues"
+  },
+  "homepage": "https://github.com/aksamidiel/excel_app#readme"
+}
