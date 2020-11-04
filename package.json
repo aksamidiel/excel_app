@@ -4,7 +4,9 @@
   "description": "javascript excel app",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,10 +17,26 @@
     "javascript",
     "excel"
   ],
-  "author": "aksamidiel (raven-xl@mail.ru)",
+  "author": "aksamidiel <raven-xl@mail.ru>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/aksamidiel/excel_app/issues"
   },
-  "homepage": "https://github.com/aksamidiel/excel_app#readme"
+  "homepage": "https://github.com/aksamidiel/excel_app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.2.1",
+    "sass": "^1.28.0",
+    "sass-loader": "^10.0.5",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0"
+  }
 }
