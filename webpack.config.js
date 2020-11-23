@@ -27,7 +27,7 @@ const jsLoaders = () => {
 }
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
+  context: path.resolve(__dirname, 'source'),
   mode: 'development',
   entry: ['@babel/polyfill', './index.js'],
   output: {
@@ -37,8 +37,8 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@core': path.resolve(__dirname, 'src/core')
+      '@': path.resolve(__dirname, 'source'),
+      '@core': path.resolve(__dirname, 'source/core')
     }
   },
   devtool: isDev ? 'source-map' : false,
@@ -55,12 +55,13 @@ module.exports = {
         collapseWhitespace: isProd
       }
     }),
-    new CopyPlugin([
+    new CopyPlugin({
+      patterns: [
       {
         from: path.resolve(__dirname, 'source/favicon.ico'),
         to: path.resolve(__dirname, 'dist')
       }
-    ]),
+    ]}),
     new MiniCssExtractPlugin({
       filename: filename('css')
     })
